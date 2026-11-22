@@ -236,6 +236,71 @@ if (mobileMenuBtn && mobileMenu) {
     });
 }
 
+// Give in-page navigation a slower, more deliberate feel without changing
+// native wheel, touch, or keyboard scrolling.
+const prefersReducedMotionForScroll = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!prefersReducedMotionForScroll) {
+    let scrollAnimationId = 0;
+
+    function animateScrollTo(targetY) {
+        const animationId = ++scrollAnimationId;
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const duration = 900;
+        const startTime = performance.now();
+
+        function step(now) {
+            if (animationId !== scrollAnimationId) return;
+
+            const progress = Math.min(1, (now - startTime) / duration);
+            const easedProgress = progress < 0.5
+                ? 4 * progress * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+            window.scrollTo(0, startY + distance * easedProgress);
+            if (progress < 1) requestAnimationFrame(step);
+        }
+
+        requestAnimationFrame(step);
+    }
+
+    function stopScrollAnimation() {
+        scrollAnimationId += 1;
+    }
+
+    document.addEventListener('click', event => {
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+        const link = event.target.closest('a[href^="#"]');
+        if (!link || link.target || link.hasAttribute('download')) return;
+
+        const targetId = link.hash.slice(1);
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        event.preventDefault();
+        if (window.location.hash !== link.hash) {
+            window.history.pushState(null, '', link.hash);
+        }
+        animateScrollTo(window.scrollY + target.getBoundingClientRect().top);
+    });
+
+    window.addEventListener('popstate', () => {
+        const target = window.location.hash
+            ? document.getElementById(window.location.hash.slice(1))
+            : null;
+        animateScrollTo(target ? window.scrollY + target.getBoundingClientRect().top : 0);
+    });
+
+    window.addEventListener('wheel', stopScrollAnimation, { passive: true });
+    window.addEventListener('touchstart', stopScrollAnimation, { passive: true });
+    window.addEventListener('keydown', event => {
+        if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) {
+            stopScrollAnimation();
+        }
+    });
+}
+
 /* =========================================================================
    3. SUBTLE SCROLL-BASED ANIMATIONS & RIGHT-SIDE DOT MENU SPY
    ========================================================================= */

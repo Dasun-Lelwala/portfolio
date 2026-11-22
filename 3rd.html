@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Dasun Lelwala</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="subpage-header">
+        <div class="subpage-header-inner">
+            <a href="index.html" class="brand-link" aria-label="Dasun Lelwala Portfolio Home">
+                <svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                    <text x="2" y="27" font-family="Inter, Arial, sans-serif" font-size="25" font-style="italic" font-weight="800" letter-spacing="-3" fill="currentColor">D<tspan fill="#0ea5e9">L</tspan></text>
+                </svg>
+                <span class="brand-name">Dasun Lelwala</span>
+            </a>
+            <a href="index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </header>
+
+    <main class="subpage-main">
+        <section class="projects-hero reveal" aria-labelledby="projects-title">
+            <span class="projects-eyebrow">04 / Selected Works</span>
+            <h1 id="projects-title">Project <span>Archive</span></h1>
+            <p>Engineering prototypes, software utilities, web builds, and visual design projects with implementation details.</p>
+        </section>
+
+        <div class="filter-bar" id="project-filters" aria-label="Filter projects">
+            <button type="button" data-filter="all" class="filter-btn is-selected">All Projects</button>
+            <button type="button" data-filter="Electronics" class="filter-btn">Arduino &amp; Electronics</button>
+            <button type="button" data-filter="Programming" class="filter-btn">Programming</button>
+            <button type="button" data-filter="Web" class="filter-btn">Web Dev</button>
+            <button type="button" data-filter="Design" class="filter-btn">Photoshop &amp; Blender</button>
+        </div>
+
+        <div id="projects-grid" class="projects-grid"></div>
+    </main>
+
+    <footer class="subpage-footer">
+        <div>
+            <p class="footer-author">Dasun Lelwala</p>
+            <p>© <span id="year"></span> • Engineering Undergraduate Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- The same project overview popup structure used on the homepage -->
+    <div id="project-modal" class="project-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-container">
+            <div>
+                <div class="modal-topbar">
+                    <button id="close-project-modal" type="button" class="modal-back-btn">
+                        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                        <span>Back to Portfolio</span>
+                    </button>
+                    <span id="modal-category-badge" class="modal-category-badge">Category</span>
+                </div>
+
+                <div class="modal-media-frame">
+                    <div class="modal-media-box">
+                        <img id="modal-image" src="" alt="Project Preview" class="modal-image">
+                    </div>
+                </div>
+
+                <div class="modal-title-block">
+                    <div class="modal-title-row">
+                        <h2 id="modal-title" class="modal-title">Project Title</h2>
+                        <span id="modal-timeline" class="modal-timeline">2026</span>
+                    </div>
+                    <div id="modal-tags" class="modal-tags"></div>
+                </div>
+
+                <div class="modal-details-card">
+                    <div class="modal-overview-block">
+                        <h3 class="modal-section-label label-cerulean">Overview</h3>
+                        <p id="modal-overview" class="modal-overview-text"></p>
+                    </div>
+
+                    <div class="modal-two-col">
+                        <div class="modal-col-box">
+                            <h3 class="modal-section-label label-cerulean">Key Features &amp; Implementation</h3>
+                            <ul id="modal-features" class="modal-features-list"></ul>
+                        </div>
+                        <div class="modal-col-box">
+                            <h3 class="modal-section-label label-teal">Challenges &amp; Learnings</h3>
+                            <p id="modal-learnings" class="modal-learnings-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-bar">
+                <div id="modal-link-container"></div>
+                <button id="close-project-modal-bottom" type="button" class="modal-close-btn">
+                    Close Overview
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
