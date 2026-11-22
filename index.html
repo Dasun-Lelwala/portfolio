@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasun Lelwala | Engineering Undergraduate &amp; Developer</title>
+
+    <!-- External Libraries: Font Awesome Icons & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- All Portfolio Stylesheet Rules -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- =====================================================================
+         1. TOP NAVIGATION HEADER
+         ===================================================================== -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- Custom Geometric Monogram Mark -->
+            <a href="#welcome" class="brand-link" aria-label="Dasun Lelwala Home">
+                <svg class="brand-mark" viewBox="0 0 36 36" fill="none">
+                    <path d="M6 9L24 5V10L6 14V9Z" fill="currentColor"/>
+                    <path d="M6 17L28 12V17L6 22V17Z" fill="#0ea5e9"/>
+                    <path d="M6 25L22 21V26L14 28L28 31V35L6 29V25Z" fill="currentColor"/>
+                </svg>
+                <span class="brand-name">Dasun Lelwala</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="desktop-nav" aria-label="Primary Navigation">
+                <a href="#about" class="nav-link">about</a>
+                <a href="#education" class="nav-link">education</a>
+                <a href="#achievements" class="nav-link">achievements</a>
+                <a href="#skills" class="nav-link">skills</a>
+                <a href="#contact" class="nav-link">contact</a>
+                <a href="#projects" title="View Projects" class="nav-folder-link" aria-label="View Projects">
+                    <i class="fas fa-folder"></i>
+                </a>
+            </nav>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="#welcome" class="mobile-nav-link">welcome</a>
+            <a href="#education" class="mobile-nav-link">education</a>
+            <a href="#achievements" class="mobile-nav-link">achievements</a>
+            <a href="#skills" class="mobile-nav-link">skills</a>
+            <a href="#projects" class="mobile-nav-link mobile-nav-highlight">projects</a>
+            <a href="#contact" class="mobile-nav-link">contact</a>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         2. SIDE RAILS (LEFT ROLE LABEL & RIGHT SECTION DOT MENU)
+         ===================================================================== -->
+    <!-- Left Vertical Rail -->
+    <aside class="left-rail" aria-hidden="true">
+        <div class="left-rail-spacer"></div>
+        <div class="vertical-rail-text left-rail-label">
+            engineering / developer
+        </div>
+        <div class="left-rail-socials">
+            <a href="#contact" title="Email" class="rail-icon-link"><i class="fas fa-envelope"></i></a>
+            <a href="#contact" title="GitHub" class="rail-icon-link"><i class="fab fa-github"></i></a>
+            <a href="#contact" title="LinkedIn" class="rail-icon-link"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </aside>
+
+    <!-- Right Dot Navigation Menu (Tracks Active Section on Scroll) -->
+    <aside class="right-dots-nav" id="section-dots-nav" aria-label="Section Quick Jump">
+        <a href="#welcome" data-target="welcome" class="dot-nav-item is-active">
+            <span class="dot-label">Welcome</span>
+            <span class="dot-circle">
+                <span class="dot-core"></span>
+            </span>
+        </a>
+        <a href="#education" data-target="education" class="dot-nav-item">
+            <span class="dot-label">Education</span>
+            <span class="dot-circle">
+                <span class="dot-core"></span>
+            </span>
+        </a>
+        <a href="#achievements" data-target="achievements" class="dot-nav-item">
+            <span class="dot-label">Achievements</span>
+            <span class="dot-circle">
+                <span class="dot-core"></span>
+            </span>
+        </a>
+        <a href="#skills" data-target="skills" class="dot-nav-item">
+            <span class="dot-label">Skills</span>
+            <span class="dot-circle">
+                <span class="dot-core"></span>
+            </span>
+        </a>
+        <a href="#projects" data-target="projects" class="dot-nav-item">
+            <span class="dot-label">Projects</span>
+            <span class="dot-circle">
+                <span class="dot-core"></span>
+            </span>
+        </a>
+        <a href="#contact" data-target="contact" class="dot-nav-item">
+            <span class="dot-label">Contact</span>
+            <span class="dot-circle">
+                <span class="dot-core"></span>
+            </span>
+        </a>
+    </aside>
+
+    <main class="main-content">
+
+        <!-- =================================================================
+             3. HERO / WELCOME SECTION (Edit your photo filename below)
+             ================================================================= -->
+        <section id="welcome" class="hero-section">
+
+            <!-- Atmospheric Blended Portrait Layer -->
+            <div id="hero-portrait-wrapper" class="hero-portrait-wrapper">
+                <div class="hero-portrait-inner">
+                    <div class="hero-portrait-glow"></div>
+
+                    <!-- YOUR PORTRAIT: Place 'ULD_2104_resize (1).jpg' in the same folder as index.html -->
+                    <img id="profile-photo"
+                         src="ULD_2104_resize (1).png"
+                         onerror="this.onerror=null; this.src='https://placehold.co/650x820/0a1529/38bdf8?text=Dasun+Lelwala';"
+                         alt="Dasun Lelwala"
+                         class="hero-portrait-blend hero-portrait-img">
+                </div>
+            </div>
+
+            <!-- Subtle Geometric Accents -->
+            <div class="geo-diamond hero-geo-diamond" aria-hidden="true"></div>
+            <div class="geo-circle hero-geo-circle" aria-hidden="true"></div>
+
+            <!-- Giant Faint Watermark -->
+            <div aria-hidden="true" class="hero-watermark">
+                Welcome
+            </div>
+
+            <!-- Hero Introduction Text & CTA -->
+            <div id="about" class="hero-copy">
+                <div class="hero-title-row">
+                    <span class="vertical-rail-text hero-role-tag">
+                        UNDERGRAD
+                    </span>
+                    <h1 class="hero-title">
+                        Dasun<br class="hero-title-break"> <span>Lelwala</span>
+                    </h1>
+                </div>
+
+                <p class="hero-description">
+                    An engineering undergraduate at the <strong class="text-bright">University of Moratuwa</strong> with a passion for <span class="text-accent">Arduino electronics</span>, <strong class="text-bright">Python &amp; web development</strong>, and creative visual design.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="editorial-cta hero-primary-cta">
+                        VIEW WORK
+                    </a>
+                    <a href="#contact" class="hero-secondary-link">
+                        Get in touch →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Down Prompt -->
+            <a href="#education" class="hero-scroll-prompt">
+                <span class="vertical-rail-text">scroll</span>
+                <span class="scroll-arrow">↓</span>
+            </a>
+        </section>
+
+        <!-- =================================================================
+             4. EDUCATION SECTION
+             ================================================================= -->
+        <section id="education" class="content-section section-narrow reveal">
+            <div class="section-header">
+                <span class="section-eyebrow">01 / Academic Background</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+
+            <div class="surface-panel divide-y">
+                <!-- University of Moratuwa -->
+                <div class="education-row stagger-item">
+                    <div class="education-top">
+                        <div class="education-identity">
+                            <div class="icon-badge icon-cerulean">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div>
+                                <h3 class="education-institution">University of Moratuwa</h3>
+                                <p class="education-program program-cerulean">Engineering Undergraduate • B.Sc. Engineering (Hons)</p>
+                            </div>
+                        </div>
+                        <span class="status-pill status-cerulean">Current</span>
+                    </div>
+                    <p class="education-detail">
+                        Pursuing an Honours degree in Engineering, developing analytical, mathematical, and practical problem-solving skills across electronics, software development, and engineering systems.
+                    </p>
+                </div>
+
+                <!-- Richmond College -->
+                <div class="education-row stagger-item">
+                    <div class="education-top">
+                        <div class="education-identity">
+                            <div class="icon-badge icon-neutral">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="education-institution">Richmond College, Galle</h3>
+                                <p class="education-program program-muted">Physical Science Stream</p>
+                            </div>
+                        </div>
+                        <span class="status-pill status-neutral">G.C.E. A/L</span>
+                    </div>
+                    <p class="education-detail">
+                        Completed secondary education in the Physical Science stream (Combined Mathematics, Physics, and Chemistry), establishing a strong quantitative foundation for engineering.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+       <!-- =================================================================
+             5. ACHIEVEMENTS SECTION (Managed via `achievements` array in script.js)
+             ================================================================= -->
+        <section id="achievements" class="content-section section-wide section-bordered reveal">
+            <div class="section-header">
+                <span class="section-eyebrow">02 / Milestones &amp; Recognition</span>
+                <h2 class="section-title">Achievements</h2>
+            </div>
+
+            <div id="achievements-grid" class="surface-panel achievements-grid"></div>
+        </section>
+
+        <!-- =================================================================
+             6. SKILLS SECTION (Prioritized for Engineering)
+             ================================================================= -->
+        <section id="skills" class="content-section section-wide section-bordered reveal">
+            <div class="section-header section-header-spaced">
+                <span class="section-eyebrow">03 / Capabilities</span>
+                <h2 class="section-title">Engineering &amp; Creative Skills</h2>
+                <p class="section-subtitle">Ordered by core engineering focus, connecting embedded hardware, programming, web building, and creative design.</p>
+            </div>
+
+            <!-- Core Engineering Skills -->
+            <div id="core-skills-grid" class="surface-panel core-skills-grid skills-spaced"></div>
+
+            <!-- Creative & Hobby Skills -->
+            <div id="creative-skills-grid" class="surface-panel creative-skills-grid"></div>
+        </section>
+
+        <!-- =================================================================
+             7. PROJECTS SECTION (Project data is managed in script.js)
+             ================================================================= -->
+        <section id="projects" class="content-section section-wide section-bordered reveal">
+            <div class="section-header">
+                <span class="section-eyebrow">04 / Selected Works</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Select any project sheet below to inspect its detailed overview and implementation notes.</p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="filter-bar" id="project-filters">
+                <button data-filter="all" class="filter-btn is-selected">All Projects</button>
+                <button data-filter="Electronics" class="filter-btn">Arduino &amp; Electronics</button>
+                <button data-filter="Programming" class="filter-btn">Programming</button>
+                <button data-filter="Web" class="filter-btn">Web Dev</button>
+                <button data-filter="Design" class="filter-btn">Photoshop &amp; Blender</button>
+            </div>
+
+            <!-- Project Cards Container (Populated by script.js) -->
+            <div id="projects-grid" class="projects-grid"></div>
+        </section>
+
+        <!-- =================================================================
+             8. CONTACT SECTION (Fill in your details inside the brackets)
+             ================================================================= -->
+        <section id="contact" class="content-section section-wide section-bordered reveal">
+            <div class="surface-panel contact-panel">
+                <div class="contact-header">
+                    <span class="section-eyebrow">05 / Correspondence</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="contact-intro">
+                        Interested in collaborating on an engineering project, Python script, web build, or creative design? Feel free to reach out through any of the channels below.
+                    </p>
+                </div>
+
+                <div class="contact-channels">
+                    <!-- Email -->
+                    <div class="contact-channel">
+                        <div class="channel-icon icon-cerulean">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p class="channel-label">Email Address</p>
+                        <p class="channel-value break-all">[your.email@example.com]</p>
+                    </div>
+
+                    <!-- Phone / WhatsApp -->
+                    <div class="contact-channel">
+                        <div class="channel-icon icon-teal">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <p class="channel-label">Phone / WhatsApp</p>
+                        <p class="channel-value">[+94 7X XXX XXXX]</p>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <a href="#contact" class="contact-channel">
+                        <div class="channel-icon icon-cerulean">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <p class="channel-label">LinkedIn</p>
+                        <p class="channel-value">[linkedin.com/in/dasun-lelwala]</p>
+                    </a>
+
+                    <!-- GitHub -->
+                    <a href="#contact" class="contact-channel">
+                        <div class="channel-icon icon-neutral">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <p class="channel-label">GitHub</p>
+                        <p class="channel-value">[github.com/dasun-lelwala]</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================================
+         9. FOOTER
+         ===================================================================== -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-author">Dasun Lelwala</p>
+            <p>© <span id="year"></span> • Engineering Undergraduate Portfolio</p>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         10. DETAILED PROJECT OVERVIEW MODAL (Opens when clicking a project)
+         ===================================================================== -->
+    <div id="project-modal" class="project-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-container">
+            <div>
+                <div class="modal-topbar">
+                    <button id="close-project-modal" class="modal-back-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back to Portfolio</span>
+                    </button>
+                    <span id="modal-category-badge" class="modal-category-badge">Category</span>
+                </div>
+
+                <div class="modal-media-frame">
+                    <div class="modal-media-box">
+                        <img id="modal-image" src="" alt="Project Preview" class="modal-image">
+                    </div>
+                </div>
+
+                <div class="modal-title-block">
+                    <div class="modal-title-row">
+                        <h2 id="modal-title" class="modal-title">Project Title</h2>
+                        <span id="modal-timeline" class="modal-timeline">2026</span>
+                    </div>
+                    <div id="modal-tags" class="modal-tags"></div>
+                </div>
+
+                <div class="modal-details-card">
+                    <div class="modal-overview-block">
+                        <h3 class="modal-section-label label-cerulean">Overview</h3>
+                        <p id="modal-overview" class="modal-overview-text"></p>
+                    </div>
+
+                    <div class="modal-two-col">
+                        <div class="modal-col-box">
+                            <h3 class="modal-section-label label-cerulean">Key Features &amp; Implementation</h3>
+                            <ul id="modal-features" class="modal-features-list"></ul>
+                        </div>
+                        <div class="modal-col-box">
+                            <h3 class="modal-section-label label-teal">Challenges &amp; Learnings</h3>
+                            <p id="modal-learnings" class="modal-learnings-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer-bar">
+                <div id="modal-link-container"></div>
+                <button id="close-project-modal-bottom" class="modal-close-btn">
+                    Close Overview
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Your JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
