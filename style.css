@@ -1522,8 +1522,14 @@ border-left: 1px solid var(--border-hairline);
 .contact-channels {
 grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.contact-channels > :nth-child(n) {
+border-top: none;
+}
 .contact-channels > * + * {
 border-top: none;
+border-left: 1px solid var(--border-hairline);
+}
+.contact-channels > :nth-child(3) {
 border-left: 1px solid var(--border-hairline);
 }
 }

@@ -9,6 +9,7 @@
     --cerulean-700: #0ea5e9;
     --teal-700: #2dd4bf;
     --ochre-700: #fbbf24;
+    --maroon-700: #de0445;
     --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: "JetBrains Mono", monospace;
 }
@@ -212,7 +213,7 @@ a {
     display: grid;
     grid-template-columns: 2.5rem minmax(0, 1fr);
     column-gap: 1.125rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .theme-ochre {
@@ -229,6 +230,10 @@ a {
 
 .theme-teal {
     --entry-accent: var(--teal-700);
+}
+
+.theme-maroon {
+    --entry-accent: var(--maroon-700);
 }
 
 .entry-icon {
@@ -253,6 +258,10 @@ a {
 
 .icon-teal {
     color: var(--teal-700);
+}
+
+.icon-maroon {
+    color: var(--maroon-700);
 }
 
 .entry-content {
