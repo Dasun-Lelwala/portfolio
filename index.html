@@ -11,6 +11,7 @@
 
     <!-- All Portfolio Stylesheet Rules -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="graphic-designs.css">
 </head>
 <body>
 
@@ -40,6 +41,7 @@
                 <a href="#projects" title="View Projects" class="nav-link" aria-label="View Projects">
                     projects
                 </a>
+                <a href="graphic-designs.html" class="nav-link">graphic design</a>
             </nav>
 
             <!-- Mobile Hamburger Menu Button -->
@@ -55,6 +57,7 @@
             <a href="#achievements" class="mobile-nav-link">achievements</a>
             <a href="#skills" class="mobile-nav-link">skills</a>
             <a href="#projects" class="mobile-nav-link mobile-nav-highlight">projects</a>
+            <a href="graphic-designs.html" class="mobile-nav-link mobile-nav-highlight">graphic design</a>
             <a href="#contact" class="mobile-nav-link">contact</a>
         </div>
     </header>
@@ -103,6 +106,12 @@
         </a>
         <a href="#projects" data-target="projects" class="dot-nav-item">
             <span class="dot-label">Projects</span>
+            <span class="dot-circle">
+                <span class="dot-core"></span>
+            </span>
+        </a>
+        <a href="#graphic-design" data-target="graphic-design" class="dot-nav-item">
+            <span class="dot-label">Graphic Design</span>
             <span class="dot-circle">
                 <span class="dot-core"></span>
             </span>
@@ -218,7 +227,7 @@
                                 <p class="education-program program-muted">Physical Science Stream</p>
                             </div>
                         </div>
-                        <span class="status-pill status-neutral">G.C.E. A/L</span>
+                        <span class="status-pill status-neutral">2012 - 2025</span>
                     </div>
                     <p class="education-detail">
                         Completed secondary education in the Physical Science stream (Combined Mathematics, Physics, and Chemistry), establishing a strong quantitative foundation for engineering.
@@ -238,7 +247,7 @@
 
             <div id="achievements-grid" class="surface-panel achievements-grid"></div>
             <div class="achievements-action">
-                <a href="2nd.html" class="hero-primary-cta editorial-cta">
+                <a href="2nd.html" class="hero-primary-cta editorial-cta archive-cta">
                     View Full Record <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </div>
@@ -271,31 +280,46 @@
                 <p class="section-subtitle">Select any project sheet below to inspect its detailed overview and implementation notes.</p>
             </div>
 
-            <!-- Category Filter Buttons -->
-            <div class="filter-bar" id="project-filters">
-                <button data-filter="all" class="filter-btn is-selected">All Projects</button>
-                <button data-filter="Electronics" class="filter-btn">Arduino &amp; Electronics</button>
-                <button data-filter="Programming" class="filter-btn">Programming</button>
-                <button data-filter="Web" class="filter-btn">Web Dev</button>
-                <button data-filter="Design" class="filter-btn">Photoshop &amp; Blender</button>
-            </div>
-
             <!-- Project Cards Container (Populated by script.js) -->
             <div id="projects-grid" class="projects-grid"></div>
             <div class="projects-action">
-                <a href="3rd.html" class="hero-primary-cta editorial-cta">
-                    View All Projects <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <a href="3rd.html" class="hero-primary-cta editorial-cta archive-cta">
+                    Explore Full Project Archive <i class="fas fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </div>
         </section>
 
         <!-- =================================================================
-             8. CONTACT SECTION (Fill in your details inside the brackets)
+             8. GRAPHIC DESIGN FEATURE (Artwork lives on its own page)
+             ================================================================= -->
+        <section id="graphic-design" class="content-section section-wide section-bordered reveal">
+            <div class="section-header">
+                <span class="section-eyebrow">05 / Visual Stories</span>
+                <h2 class="section-title">Graphic Design</h2>
+                <p class="section-subtitle">A collection of visual work, from social media graphics to brand-focused compositions.</p>
+            </div>
+
+            <div class="designs-promo surface-panel">
+                <div class="designs-promo-icon" aria-hidden="true">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+                <div class="designs-promo-copy">
+                    <h3>Explore the design portfolio</h3>
+                    <p>Browse the complete gallery and open any piece for a closer look.</p>
+                </div>
+                <a href="graphic-designs.html" class="hero-primary-cta editorial-cta designs-promo-link archive-cta">
+                    View Graphic Designs <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             9. CONTACT SECTION (Fill in your details inside the brackets)
              ================================================================= -->
         <section id="contact" class="content-section section-wide section-bordered reveal">
             <div class="surface-panel contact-panel">
                 <div class="contact-header">
-                    <span class="section-eyebrow">05 / Correspondence</span>
+                    <span class="section-eyebrow">06 / Correspondence</span>
                     <h2 class="section-title">Get In Touch</h2>
                     <p class="contact-intro">
                         Interested in collaborating on an engineering project, Python script, web build, or creative design? Feel free to reach out through any of the channels below.
@@ -344,7 +368,7 @@
     </main>
 
     <!-- =====================================================================
-         9. FOOTER
+         10. FOOTER
          ===================================================================== -->
     <footer class="site-footer">
         <div class="footer-inner">
@@ -354,7 +378,7 @@
     </footer>
 
     <!-- =====================================================================
-         10. DETAILED PROJECT OVERVIEW MODAL (Opens when clicking a project)
+         11. DETAILED PROJECT OVERVIEW MODAL (Opens when clicking a project)
          ===================================================================== -->
     <div id="project-modal" class="project-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-container">

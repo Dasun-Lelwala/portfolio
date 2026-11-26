@@ -187,7 +187,7 @@ if (!prefersReducedMotion && 'IntersectionObserver' in window) {
 
 // Active Section Tracking for Right-Edge Dot Navigation Rail
 const dotItems = document.querySelectorAll('.dot-nav-item');
-const trackedSections = ['welcome', 'education', 'achievements', 'skills', 'projects', 'contact']
+const trackedSections = ['welcome', 'education', 'achievements', 'skills', 'projects', 'graphic-design', 'contact']
     .map(id => document.getElementById(id))
     .filter(Boolean);
 
@@ -443,9 +443,10 @@ function renderProjects() {
     if (!projectsGrid) return;
 
     projectsGrid.innerHTML = '';
+    const projectList = document.querySelector('.projects-hero') ? projects : projects.slice(0, 3);
     const visibleProjects = currentFilter === 'all'
-        ? projects
-        : projects.filter(project => project.category === currentFilter);
+        ? projectList
+        : projectList.filter(project => project.category === currentFilter);
 
     if (visibleProjects.length === 0) {
         projectsGrid.innerHTML = `
